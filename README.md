@@ -1,5 +1,13 @@
 # Erlang Node Operations Cheat Sheet
 
+- [Starting Nodes](#starting-nodes)
+- [Peering Nodes](#peering-nodes)
+- [RPC](#rpc)
+- [Module Operations](#module-operations)
+- [Slave Nodes](#slave-nodes)
+- [Node Information](#node-information)
+- [Distribution Settings](#distribution-settings)
+
 ## Starting Nodes
 
 ### Basic Node Start
@@ -135,5 +143,3 @@ net_kernel:get_net_ticktime().    % Get net tick time
 -kernel dist_auto_connect once
 -kernel sync_nodes_timeout 10000
 ```
-
-Would you like me to expand on any of these sections?
