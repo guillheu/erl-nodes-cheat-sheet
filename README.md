@@ -146,12 +146,4 @@ net_kernel:get_net_ticktime().    % Get net tick time
 ```
 
 ## Building From Source
-```bash
-rm /usr/bin/erl
-wget https://github.com/erlang/otp/archive/refs/tags/OTP-27.1.2.zip
-unzip OTP-27.1.2.zip
-cd otp-OTP-27.1.2/
-export ERL_TOP=`pwd`
-./configure
-make
-```
+[Just use `kerl`](https://github.com/kerl/kerl?tab=readme-ov-file#installing-kerl)
