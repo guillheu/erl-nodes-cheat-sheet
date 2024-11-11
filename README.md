@@ -75,8 +75,15 @@ Paths = filelib:wildcard("/path/*").                                   % Create 
 
 ### Remote Module Operations
 ```erlang
-% Copy module to remote node
+% Load module on remote node
 rpc:call(Node, code, add_path, ["/path/to/beam"]).
+rpc:call(Node, code, load_file, [my_module]).
+
+% Load module TO all remote nodes
+nl(my_module).
+nl([module1, module2]).
+
+% Load module to specific node
 rpc:call(Node, code, load_file, [my_module]).
 
 % Execute remote function
