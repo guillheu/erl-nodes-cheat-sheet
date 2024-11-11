@@ -66,6 +66,13 @@ code:load_abs("/path/to/my_module").         % Load from absolute path
 code:is_loaded(my_module).                   % Check if module loaded
 ```
 
+### File Path Wildcard Operations
+```erlang
+Paths = filelib:wildcard("/path/*").                                   % Create multipath from glob expression
+[code:add_path(Path) || Path <- Paths].                                % Add all paths to code path
+[code:add_path(P) || P <- filelib:wildcard("/path/to/directory/*")].   % As a compact single expression
+```
+
 ### Remote Module Operations
 ```erlang
 % Copy module to remote node
