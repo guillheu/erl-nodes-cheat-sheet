@@ -7,6 +7,7 @@
 - [Slave Nodes](#slave-nodes)
 - [Node Information](#node-information)
 - [Distribution Settings](#distribution-settings)
+- [Building Erlang From Source](#building-from-source)
 
 ## Starting Nodes
 
@@ -142,4 +143,15 @@ net_kernel:get_net_ticktime().    % Get net tick time
 -kernel inet_dist_listen_max 9200
 -kernel dist_auto_connect once
 -kernel sync_nodes_timeout 10000
+```
+
+## Building From Source
+```bash
+rm /usr/bin/erl
+wget https://github.com/erlang/otp/archive/refs/tags/OTP-27.1.2.zip
+unzip OTP-27.1.2.zip
+cd otp-OTP-27.1.2/
+export ERL_TOP=`pwd`
+./configure
+make
 ```
